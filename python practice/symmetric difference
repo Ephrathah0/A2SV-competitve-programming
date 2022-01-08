@@ -1,0 +1,12 @@
+M = int(input())
+mset = set(map(int, input().split()))
+N = int(input())
+nset = set(map(int, input().split()))
+
+msym = mset.difference(nset)
+nsym = nset.difference(mset)
+
+final = mdef.union(ndef)
+
+for i in sorted(list(final)):
+    print(i)
