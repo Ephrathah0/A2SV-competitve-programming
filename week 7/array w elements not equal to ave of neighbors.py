@@ -21,8 +21,7 @@ class Solution:
             f[i]=x
             i+=2
             
-        
-
+       
         return f
                 
                 
