@@ -17,9 +17,9 @@ class Solution:
             
             x =traverse(a.left,b.right)
         
-            t= traverse(a.right,b.left)
+            y= traverse(a.right,b.left)
             
-            return a and b
+            return x and y
         
         return traverse(root.left,root.right)
     
