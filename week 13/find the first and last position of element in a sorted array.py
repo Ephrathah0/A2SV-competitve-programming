@@ -3,7 +3,7 @@ class Solution:
         
         x = -1
         
-        def binarySearch(left, right, is_first):
+        def binarySearch(left, right, first):
             
             nonlocal x
             mid = left + (right-left)//2
@@ -11,23 +11,23 @@ class Solution:
                 return -1 if x==-1 else x
             
             if nums[mid] > target:
-                return binarySearch(left, mid-1, is_first)
+                return binarySearch(left, mid-1, first)
             elif nums[mid] < target:
-                return binary_search(mid + 1, right, is_first)
+                return binarySearch(mid + 1, right, first)
             else:
-                if is_first:
+                if first:
                     right = mid -1
                 else:
                     left = mid + 1
                     
                 x = mid
-                return binarySearch(left, right, is_first)
+                return binarySearch(left, right, first)
         
         left = 0
         right = len(nums)-1
-        first_index = binarySearch(left, right, True)
+        index = binarySearch(left, right, True)
         
-        if first_index == -1:
+        if index == -1:
             return [-1 ,-1]
         
-        return [first_index, binarySearch(left, right, False)]
+        return index, binarySearch(left, right, False)
