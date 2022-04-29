@@ -1,3 +1,13 @@
+#Insert Operation:
+#Time: O(n)
+#Space: O(n)
+#Search Operation:
+#Time: O(n)
+#Space: O(1)
+#StartsWith Operation:
+#Time: O(n)
+#Space: O(1)
+    
 class TrieNode:
     def __init__(self):
         self.children = {}
